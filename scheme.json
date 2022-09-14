@@ -1,6 +1,30 @@
 {
     "Groups": [
-        
+        {
+            "Name": "Main",
+            "DisplayName": "Configuration",
+            "Elements": [
+                {
+                    "Name": "Preset",
+                    "DisplayName": "HUD Preset",
+                    "Type": "HUDEnum",
+                    "MinValue": null,
+                    "MaxValue": null,
+                    "DefaultValue": "default"
+                },
+                {
+                    "Name": "IncludeDir1",
+                    "DisplayName": "Custom UI",
+                    "Description": [
+                        "Enables or disables custom UI files. (not the HUD)"
+                    ],
+                    "Type": "UIEnum",
+                    "MinValue": null,
+                    "MaxValue": null,
+                    "DefaultValue": ""
+                }
+            ]
+        },
         {
             "Name": "Additional",
             "DisplayName": "Additional Elements",
@@ -59,8 +83,8 @@
                     "MinValue": null,
                     "MaxValue": null,
                     "DefaultValue": true
-                }          
-            ]           
+                }
+            ]
         },
         {
             "Name": "Count",
@@ -92,37 +116,64 @@
                     "Name": "MaxRings",
                     "DisplayName": "Max Rings Count",
                     "Description": [
-                        "Sets the number of the ring cap in the HUD. (affects the max number of rings you can get as well)"
+                        "Sets the number of the ring cap in the HUD. (doesn't affects the max number of rings you can get for now)"
                     ],
                     "Type": "int",
                     "MinValue": null,
                     "MaxValue": null,
                     "DefaultValue": 999
-                }           
-            ]           
+                },
+                {
+                    "Name": "ScoreGenerationsFormat",
+                    "DisplayName": "Score Generations Format",
+                    "Description": [
+                        "Set the amount of numbers used for the Score Counter."
+                    ],
+                    "Type": "string",
+                    "MinValue": null,
+                    "MaxValue": null,
+                    "DefaultValue": "%d"
+                }
+            ]
         }
     ],
     "Enums": {
         "HUDEnum": [
             {
-                "DisplayName": "Full",
-                "Value": "full",
+                "DisplayName": "Default",
+                "Value": "default",
                 "Description": [
-                    "Enables the boost circle, and moves it next to the speedometer counter."
+                    "Allows you to modify the HUD to your liking."
                 ]
             },
             {
-                "DisplayName": "Speed",
-                "Value": "speed",
+                "DisplayName": "Open-Zone",
+                "Value": "openzone",
                 "Description": [
-                    "Disables the boost circle, most accurate to Frontiers."
+                    "Enables everything to resemble the Open Zone HUD from Frontiers."
                 ]
             },
             {
-                "DisplayName": "Boost",
-                "Value": "boost",
+                "DisplayName": "Cyberspace",
+                "Value": "cyberspace",
                 "Description": [
-                    "Disables the speedometer and places the boost circle in its place."
+                    "Disables certain elements to resemble the Cyberspace HUD from Frontiers."
+                ]
+            }
+        ],
+        "UIEnum": [
+            {
+                "DisplayName": "Disabled (Recommended)",
+                "Value": "",
+                "Description": [
+                    "Disable General UI Modifications."
+                ]
+            },
+            {
+                "DisplayName": "Enabled [W.I.P]",
+                "Value": "ui",
+                "Description": [
+                    "Enable General UI Modifications.\n[NOTE: These modifications may crash your game, as they are still very W.I.P. I would recommend you turn them off for now, and wait for an update that fixes the crashes.]"
                 ]
             }
         ]
