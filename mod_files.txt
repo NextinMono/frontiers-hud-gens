@@ -1,5 +1,6 @@
 add FrontiersHUD.dll
 add mod_files.txt
+add mod.ini
 add disk/bb/SonicActionCommon.ar.00
 add disk/bb/SonicActionCommonHud.ar.00
 add disk/bb/SonicActionCommonHud.ar.01
